@@ -1,9 +1,19 @@
+# Host guard: only apply main-site rewrite rules for goalgus hosts.
+# Addon/sub DocumentRoots under public_html still inherit this file; without the
+# guard, rewrite/ErrorDocument rules can 500 those vhosts. Client site files live
+# in public_html/websites/*; cPanel DocumentRoot uses shallow symlinks
+# public_html/{barbergarage,ginny,kitchen} → websites/... because Apache on this
+# host cannot serve nested public_html/websites/* paths as DocumentRoot.
 DirectoryIndex index.php index.html
 ErrorDocument 404 /404.php
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
+
+    # Skip all rewrite rules for non-goalgus hosts (addon sites under /websites).
+    RewriteCond %{HTTP_HOST} !^(www\.)?(goalgus\.bg|goalgus\.com)$ [NC]
+    RewriteRule ^ - [L]
 
     # Force HTTPS.
     RewriteCond %{HTTPS} !=on
