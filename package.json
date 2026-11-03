@@ -1,0 +1,12 @@
+{
+  "name": "goalgus-site",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/site.ts --bundle --minify --outfile=assets/js/site.js",
+    "watch": "esbuild src/site.ts --bundle --outfile=assets/js/site.js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "typescript": "^5.8.0"
+  }
+}

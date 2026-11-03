@@ -1,0 +1,33 @@
+{
+  "legal_name": "GOALGUS LTD",
+  "legal_name_bg": "ГОАЛГЪС ЕООД",
+  "siteurl": "https://goalgus.bg",
+  "tagline_en": "Software services, development and maintenance of digital products, as well as any other commercial activities not prohibited by law",
+  "tagline_bg": "Софтуерни услуги, разработка и поддръжка на дигитални продукти, както и всяка друга търговска дейност, незабранена от закона",
+  "admin_email": "admin@goalgus.bg",
+  "source": "WordPress options export 2026-10-30 + finansi.bg register data",
+  "assets": {
+    "icon": "brand/goalgus_shield.png",
+    "icon_png": "brand/goalgus_shield.png"
+  },
+  "phone": "+359 87 704 1489",
+  "phone_e164": "+359877041489",
+  "contact_email": "contact@goalgus.bg",
+  "legal_form": "Single-Member Limited Liability Company (Ltd.)",
+  "legal_form_bg": "ЕООД",
+  "registered_address": "35 Dimitar Hadzhikotsev St., Entrance B, Floor 4, Apt. 11, Lozenets District, 1421 Sofia, Sofia City Province, Bulgaria",
+  "registered_address_bg": "област София (столица), София 1421, район Лозенец, ул. Димитър Хаджикоцев 35, вх. Б, ет. 4, ап. 11",
+  "uic": "207265170",
+  "vat_id": "BG207265170",
+  "vat": "Yes, since March 2, 2023",
+  "vat_bg": "Да, от 02.03.2023",
+  "established": "2023-02-14",
+  "established_bg": "14.02.2023",
+  "vat_registered_since": "2023-03-02",
+  "managing_director": "Stiliyan Vasilev Stoyanov",
+  "managing_director_bg": "Стилиян Василев Стоянов",
+  "ownership": "Stiliyan Vasilev Stoyanov – 100% (Sole Owner)",
+  "ownership_bg": "Стилиян Василев Стоянов – 100% (едноличен собственик на капитала)",
+  "scope_of_business": "Provision of software services, development and maintenance of digital products, as well as any other commercial activities not prohibited by law.",
+  "scope_of_business_bg": "Софтуерни услуги, разработка и поддръжка на дигитални продукти, както и всяка друга търговска дейност, незабранена от закона."
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "barbergarage",
+    "url": "https://barbergarage.bg",
+    "title_en": "BarberGarage",
+    "title_bg": "BarberGarage",
+    "tag_en": "Barbershop · CMS + site",
+    "tag_bg": "Бръснарница · CMS + сайт",
+    "summary_en": "Bilingual brand site powered by a signed-media CMS API — gallery, hours, map, and content owned in the dashboard.",
+    "summary_bg": "Двуезичен бранд сайт с CMS API и подписана медия — галерия, работно време, карта и съдържание от таблото."
+  },
+  {
+    "slug": "ginny",
+    "url": "https://ginny.bg",
+    "title_en": "Ginny Rock Bar",
+    "title_bg": "Ginny Rock Bar",
+    "tag_en": "Venue · site + Instagram sync",
+    "tag_bg": "Заведение · сайт + Instagram синхрон",
+    "summary_en": "Atmosphere-first site for a Sozopol rock bar, with programa pages fed by scheduled Instagram sync.",
+    "summary_bg": "Атмосферен сайт за рок бар в Созопол, с програма, захранвана от почасов Instagram синхрон."
+  },
+  {
+    "slug": "kitchen",
+    "url": "https://kitchen.ginny.bg",
+    "title_en": "Ginny's Kitchen",
+    "title_bg": "Ginny's Kitchen",
+    "tag_en": "Restaurant · bilingual menu",
+    "tag_bg": "Ресторант · двуезично меню",
+    "summary_en": "Sister kitchen site with brunch and mains managed as structured menu items in the shared Sites platform.",
+    "summary_bg": "Сестрински кухненски сайт с brunch и основни ястия като структурирани менюта в общата Sites платформа."
+  }
+]

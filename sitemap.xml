@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://goalgus.bg/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://goalgus.com/"/>
+  </url>
+  <url>
+    <loc>https://goalgus.bg/bg/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/"/>
+  </url>
+  <url>
+    <loc>https://goalgus.bg/bg/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/about/"/>
+  </url>
+  <url>
+    <loc>https://goalgus.bg/bg/founder/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/founder/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/founder/"/>
+  </url>
+  <url>
+    <loc>https://goalgus.bg/bg/services/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/services/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/services/"/>
+  </url>
+  <url>
+    <loc>https://goalgus.bg/bg/portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/portfolio/"/>
+  </url>
+  <url>
+    <loc>https://goalgus.bg/bg/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/contact/"/>
+  </url>
+  <url>
+    <loc>https://goalgus.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://goalgus.com/"/>
+  </url>
+  <url>
+    <loc>https://goalgus.com/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/about/"/>
+  </url>
+  <url>
+    <loc>https://goalgus.com/founder/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/founder/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/founder/"/>
+  </url>
+  <url>
+    <loc>https://goalgus.com/services/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/services/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/services/"/>
+  </url>
+  <url>
+    <loc>https://goalgus.com/portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/portfolio/"/>
+  </url>
+  <url>
+    <loc>https://goalgus.com/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/contact/"/>
+  </url>
+</urlset>

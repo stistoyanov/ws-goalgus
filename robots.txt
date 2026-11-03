@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://goalgus.com/sitemap.xml
+Sitemap: https://goalgus.bg/sitemap.xml

@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "title_suffix": "GOALGUS LTD",
+    "home_title": "Full-stack software company",
+    "home_description": "GOALGUS LTD builds and operates digital products end to end — strategy, engineering, APIs, and hosting.",
+    "about_title": "About",
+    "about_description": "Who we are, how we work, and the company behind the software.",
+    "founder_title": "Founder",
+    "founder_description": "Stiliyan Stoyanov — founder of GOALGUS LTD. Lead software engineer and solution architect with 13+ years across SaaS, fintech, cloud and AI.",
+    "services_title": "Services",
+    "services_description": "Product engineering, APIs, CMS platforms, and reliable operations.",
+    "portfolio_title": "Portfolio",
+    "portfolio_description": "Selected client websites we design, build, and run.",
+    "contact_title": "Contact",
+    "contact_description": "Tell us about your project. We reply from Sofia, Bulgaria."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "founder": "Founder",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "cta": "Start a project"
+  },
+  "home": {
+    "eyebrow": "Software company · Sofia",
+    "headline": "We build the stack your product actually runs on.",
+    "lead": "From first sketch to production APIs, CMS, and hosting — GOALGUS is a full-stack partner for teams that need software that ships and stays online.",
+    "cta_primary": "Talk to us",
+    "cta_secondary": "See our work",
+    "strip_title": "What we do",
+    "strip_lead": "End-to-end delivery without the agency theatre.",
+    "pillars": [
+      {
+        "code": "01",
+        "title": "Product engineering",
+        "text": "Web apps, dashboards, and customer-facing sites built for clarity and long-term ownership."
+      },
+      {
+        "code": "02",
+        "title": "APIs & integrations",
+        "text": "Secure backends, content APIs, mail, and third-party sync that keep your operations moving."
+      },
+      {
+        "code": "03",
+        "title": "Operate & improve",
+        "text": "Hosting, monitoring, CMS workflows, and iterative upgrades after launch — not a hand-off and goodbye."
+      }
+    ],
+    "portfolio_title": "Recent work",
+    "portfolio_lead": "Live client sites we own end to end.",
+    "portfolio_cta": "Full portfolio"
+  },
+  "about": {
+    "headline": "A focused software company, not a slide deck.",
+    "lead": "GOALGUS LTD is a single-member limited company based in Sofia. We design, build, and maintain digital products for businesses that need dependable engineering — not freelancers who disappear after the first deploy.",
+    "body": [
+      "We work across the full stack: interface, application logic, APIs, content systems, email, and production hosting.",
+      "Our preference is long partnerships — launch, then keep the product healthy with measured improvements."
+    ],
+    "facts_title": "Company facts",
+    "scope_title": "Scope of business"
+  },
+  "founder": {
+    "eyebrow": "Founder",
+    "name": "Stiliyan Stoyanov",
+    "role": "Lead Software Engineer · Solution Architect",
+    "location": "Sofia, Bulgaria",
+    "intro": "I am a software architect and hands-on engineering lead focused on turning complex business processes into reliable products. My experience spans SaaS, fintech, automotive data, print manufacturing, cloud platforms and applied AI.",
+    "skills": [
+      "Laravel / PHP",
+      "AWS / Kubernetes",
+      "System Architecture",
+      "React / TypeScript",
+      "AI / LLM",
+      "Engineering Leadership"
+    ],
+    "about_title": "About",
+    "experience_title": "Experience",
+    "work_title": "Selected work",
+    "downloads_title": "CV downloads",
+    "downloads_lead": "PDF versions tailored for different conversations — pick the one that fits.",
+    "cta_title": "Work with GOALGUS",
+    "cta_lead": "Need architecture, delivery leadership, or a full-stack partner from Sofia?",
+    "cta_button": "Start a project",
+    "note": "Outside engineering I write and produce original music — about 100 songs — and have contributed to music-video work for Bulgarian bands.",
+    "experience": [
+      {
+        "role": "Founder & Lead Software Engineer / Solution Architect",
+        "org": "GOALGUS LTD · BDCBox (US client)",
+        "dates": "2025–Present",
+        "bullets": [
+          "Own technical architecture and hands-on engineering for a multi-tenant automotive customer data platform spanning Laravel, Next.js, data ingestion, telephony and AI.",
+          "Directed five contract developers: designs, specs, integration contracts, reviews and critical fixes.",
+          "Built AWS async workflows with SQS, PostgreSQL, Redis, Kubernetes/EKS and Argo CD; multi-provider SMS/voice and LLM integrations."
+        ]
+      },
+      {
+        "role": "Technical Lead / SaaS Modernization",
+        "org": "Cloudcard LTD",
+        "dates": "Sep 2024–Sep 2025",
+        "bullets": [
+          "Technical leadership in a seven-developer team for an e-commerce SaaS platform supporting ~3,000 online stores.",
+          "Led upgrades Laravel 8→12, PHP 7→8.3 and Vue 2→3 with production-safe rollout.",
+          "Built AI Copilot workflows for reporting, campaigns and inventory-aware assistance."
+        ]
+      },
+      {
+        "role": "Founder & Software Engineering Consultant",
+        "org": "GOALGUS LTD",
+        "dates": "Feb 2023–Present",
+        "bullets": [
+          "Founded a Bulgaria-based engineering company delivering backend architecture, integrations and technical leadership for international clients."
+        ]
+      },
+      {
+        "role": "Technical Lead",
+        "org": "Beluga IT LTD",
+        "dates": "May 2019–Feb 2023",
+        "bullets": [
+          "Led five developers building publishing, print-production and customer communication software for Dutch clients.",
+          "Architected self-service design studios and workflows for print prep, mail, SMS, email and delivery.",
+          "Regular on-site planning with Netherlands stakeholders."
+        ]
+      },
+      {
+        "role": "Technical Lead / Senior PHP Engineer",
+        "org": "Credissimo LTD",
+        "dates": "Mar 2018–May 2019",
+        "bullets": [
+          "Led backend initiatives for international consumer lending on PHP/Phalcon.",
+          "Integrated credit bureaus in Poland, North Macedonia and Colombia via SOAP and REST.",
+          "Built internal communication workflows and lending calculation systems."
+        ]
+      },
+      {
+        "role": "Full-Stack Software Engineer",
+        "org": "Pulsio LTD",
+        "dates": "Jun 2016–Mar 2018",
+        "bullets": [
+          "Co-built a Laravel/WordPress print manufacturing platform with a configurable product calculator.",
+          "Automated quotation and production planning from inventory, machine capacity and shipments."
+        ]
+      },
+      {
+        "role": "PHP Developer → Technical Lead",
+        "org": "Digits Consulting LTD",
+        "dates": "Jul 2015–Jun 2016",
+        "bullets": [
+          "Led migration of a trading platform backend from CodeIgniter to Laravel; guided PHP and frontend engineers.",
+          "Designed PHP client services integrated with a C# layer for MetaTrader 4/5."
+        ]
+      },
+      {
+        "role": "PHP Developer",
+        "org": "Illex Tech LTD",
+        "dates": "Jan–Jul 2015",
+        "bullets": [
+          "Developed a browser-based retail/POS platform covering cashiers, inventory, sales and reporting."
+        ]
+      }
+    ],
+    "work": [
+      {
+        "title": "BDCBox",
+        "text": "Architecture and engineering leadership for an automotive customer data platform: ingestion, communication systems, AI tools and AWS-based services."
+      },
+      {
+        "title": "Cloudcard",
+        "text": "SaaS modernization across Laravel, PHP and Vue; AI Copilot workflows for e-commerce operations."
+      },
+      {
+        "title": "Beluga IT",
+        "text": "Led a five-developer team building publishing, print design and communication systems for Dutch customers."
+      },
+      {
+        "title": "Credissimo",
+        "text": "Credit-bureau and lending integrations across Poland, North Macedonia and Colombia."
+      },
+      {
+        "title": "Pulsio",
+        "text": "Automated print pricing, manufacturing planning and logistics."
+      },
+      {
+        "title": "Digits Consulting",
+        "text": "Led a Laravel backend modernization for a MetaTrader-connected trading platform."
+      }
+    ],
+    "downloads": [
+      {
+        "label": "CV — Master",
+        "hint": "Universal overview",
+        "file": "/assets/downloads/stiliyan-stoyanov-cv-master.pdf"
+      },
+      {
+        "label": "CV — Backend & Architecture",
+        "hint": "Systems and platform focus",
+        "file": "/assets/downloads/stiliyan-stoyanov-cv-backend-architecture.pdf"
+      },
+      {
+        "label": "CV — Cloud & AI",
+        "hint": "Infrastructure and LLM focus",
+        "file": "/assets/downloads/stiliyan-stoyanov-cv-cloud-ai.pdf"
+      }
+    ]
+  },
+  "services": {
+    "headline": "Services built for shipping.",
+    "lead": "Practical capabilities you can hire as a coherent team — from discovery to production care.",
+    "items": [
+      {
+        "title": "Custom web applications",
+        "text": "Authenticated dashboards, admin tools, and business workflows with role-based access and audit trails."
+      },
+      {
+        "title": "Public websites & CMS",
+        "text": "Brand sites with bilingual content, media libraries, and APIs that feed static or PHP shells."
+      },
+      {
+        "title": "API platforms",
+        "text": "Laravel and PHP backends with tokens, signed media, rate limits, and activity logging."
+      },
+      {
+        "title": "Integrations",
+        "text": "Instagram sync, mail delivery, maps, and other services wired cleanly into your product."
+      },
+      {
+        "title": "Hosting & operations",
+        "text": "Superhosting and Docker-aware setups, PHP upgrades, deploys, backups, and hardening."
+      },
+      {
+        "title": "Ongoing product care",
+        "text": "Framework upgrades, performance work, UX polish, and feature delivery after go-live."
+      }
+    ]
+  },
+  "portfolio": {
+    "headline": "Work in the wild.",
+    "lead": "Three live properties we built and continue to support."
+  },
+  "contact": {
+    "headline": "Tell us what you want to build.",
+    "lead": "Share a short brief. We respond from Sofia — usually within one business day.",
+    "name": "Name",
+    "email": "Email",
+    "company": "Company (optional)",
+    "message": "Message",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success": "Thank you — your message is on its way.",
+    "error": "Something went wrong. Please try again or email us directly.",
+    "direct": "Or reach us directly",
+    "privacy": "By sending this form you agree that GOALGUS LTD may use your details only to reply to this enquiry. We do not sell or share your data for marketing."
+  },
+  "footer": {
+    "tagline": "Full-stack software · Sofia, Bulgaria",
+    "api_label": "api.goalgus.bg",
+    "rights": "All rights reserved."
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "auto": "Auto",
+    "label": "Theme"
+  }
+}
