@@ -17,8 +17,8 @@ function g_render_layout(array $ctx, string $page, string $bodyHtml, string $met
     $theme = $copy['theme'] ?? [];
     $footer = $copy['footer'] ?? [];
     $prefix = $locale === 'bg' ? '/bg' : '';
-    $alt = g_alt_locale_path($locale, $page);
-    $altLabel = $locale === 'bg' ? 'EN' : 'BG';
+    $langAria = $locale === 'bg' ? 'Език' : 'Language';
+    $langLocales = g_locale_options($page);
     $legal = $company['legal_name'] ?? 'GOALGUS LTD';
     $year = date('Y');
 
@@ -114,7 +114,7 @@ function g_render_layout(array $ctx, string $page, string $bodyHtml, string $met
                     <button type="button" data-theme-set="light" title="<?= g_esc($theme['light'] ?? 'Light') ?>">L</button>
                     <button type="button" data-theme-set="dark" title="<?= g_esc($theme['dark'] ?? 'Dark') ?>">D</button>
                 </div>
-                <a class="lang-switch" href="<?= g_esc($alt) ?>" hreflang="<?= $locale === 'bg' ? 'en' : 'bg' ?>"><?= g_esc($altLabel) ?></a>
+                <?php g_render_lang_switch($locale, $langLocales, $langAria); ?>
                 <a class="btn btn-small" href="<?= g_esc($prefix.'/contact/') ?>"><?= g_esc($nav['cta'] ?? 'Contact') ?></a>
             </div>
             <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
@@ -131,7 +131,7 @@ function g_render_layout(array $ctx, string $page, string $bodyHtml, string $met
                     <button type="button" data-theme-set="light" title="<?= g_esc($theme['light'] ?? 'Light') ?>">L</button>
                     <button type="button" data-theme-set="dark" title="<?= g_esc($theme['dark'] ?? 'Dark') ?>">D</button>
                 </div>
-                <a class="lang-switch" href="<?= g_esc($alt) ?>" hreflang="<?= $locale === 'bg' ? 'en' : 'bg' ?>"><?= g_esc($altLabel) ?></a>
+                <?php g_render_lang_switch($locale, $langLocales, $langAria); ?>
                 <a class="btn btn-small" href="<?= g_esc($prefix.'/contact/') ?>"><?= g_esc($nav['cta'] ?? 'Contact') ?></a>
             </div>
         </nav>
@@ -169,6 +169,7 @@ function g_render_layout(array $ctx, string $page, string $bodyHtml, string $met
         strings: <?= json_encode($copy['contact'] ?? [], JSON_UNESCAPED_UNICODE) ?>
       };
     </script>
+    <script src="/assets/js/locale-switch.js?v=lang1" defer></script>
     <script src="/assets/js/site.js?v=founder2" defer></script>
 </body>
 </html>
