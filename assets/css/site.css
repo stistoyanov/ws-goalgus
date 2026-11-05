@@ -677,8 +677,39 @@ button.btn {
   color: var(--accent);
 }
 
-.form-status[data-state="err"] {
+.form-status[data-state="err"],
+.form-status.is-error {
   color: #d64545;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ai-result__card {
+  margin: 1rem 0 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.ai-result__prompt {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  padding: 0.85rem 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  color: var(--ink);
 }
 
 .direct-contact {

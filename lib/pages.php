@@ -166,6 +166,163 @@ function g_page(string $locale, string $page): void
         <?php
         $title = ($meta['services_title'] ?? 'Services').' · '.$suffix;
         $desc = $meta['services_description'] ?? '';
+    } elseif ($page === 'ai-products') {
+        require_once __DIR__.'/ai-api-client.php';
+        $ai = $copy['ai_products'] ?? [];
+        $demo = $ai['demo'] ?? [];
+        $result = null;
+        $formError = null;
+        $formValues = [
+            'brief' => '',
+            'mood' => '',
+            'scene_count' => 6,
+            'character_count' => 2,
+        ];
+
+        if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
+            $formValues['brief'] = trim((string) ($_POST['brief'] ?? ''));
+            $formValues['mood'] = trim((string) ($_POST['mood'] ?? ''));
+            $formValues['scene_count'] = max(1, min(20, (int) ($_POST['scene_count'] ?? 6)));
+            $formValues['character_count'] = max(1, min(8, (int) ($_POST['character_count'] ?? 2)));
+
+            if ($formValues['brief'] === '') {
+                $formError = (string) ($demo['error_brief'] ?? 'Please enter a short creative brief.');
+            } else {
+                $payload = [
+                    'brief' => $formValues['brief'],
+                    'scene_count' => $formValues['scene_count'],
+                    'character_count' => $formValues['character_count'],
+                ];
+                if ($formValues['mood'] !== '') {
+                    $payload['mood'] = $formValues['mood'];
+                }
+                $api = g_ai_run_tool('music_video_scenario', $payload);
+                if (! $api['ok']) {
+                    $formError = $api['error'] ?: (string) ($demo['error_generic'] ?? 'Something went wrong. Try again.');
+                } else {
+                    $result = $api['body']['data'] ?? null;
+                }
+            }
+        }
+        ?>
+        <section class="page-hero shell">
+            <p class="eyebrow">GOALGUS</p>
+            <h1><?= g_esc($ai['headline'] ?? 'AI Products') ?></h1>
+            <p class="lead"><?= g_esc($ai['lead'] ?? '') ?></p>
+        </section>
+
+        <section class="section">
+            <div class="shell">
+                <div class="section-head reveal">
+                    <h2><?= g_esc($ai['products_title'] ?? 'Products') ?></h2>
+                    <p><?= g_esc($ai['products_lead'] ?? '') ?></p>
+                </div>
+                <div class="services-grid">
+                    <?php foreach (($ai['products'] ?? []) as $product): ?>
+                        <article class="service reveal">
+                            <h3><?= g_esc($product['title'] ?? '') ?></h3>
+                            <p><?= g_esc($product['text'] ?? '') ?></p>
+                            <?php if (! empty($product['badge'])): ?>
+                                <p class="muted small"><?= g_esc($product['badge']) ?></p>
+                            <?php endif; ?>
+                        </article>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="pricing">
+            <div class="shell">
+                <div class="section-head reveal">
+                    <h2><?= g_esc($ai['pricing_title'] ?? 'Pricing') ?></h2>
+                    <p><?= g_esc($ai['pricing_lead'] ?? '') ?></p>
+                </div>
+                <div class="services-grid">
+                    <?php foreach (($ai['plans'] ?? []) as $plan): ?>
+                        <article class="service reveal">
+                            <h3><?= g_esc($plan['name'] ?? '') ?></h3>
+                            <p class="lead" style="margin:0.35rem 0"><?= g_esc($plan['price'] ?? '') ?></p>
+                            <p><?= g_esc($plan['text'] ?? '') ?></p>
+                        </article>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="demo">
+            <div class="shell">
+                <div class="section-head reveal">
+                    <h2><?= g_esc($demo['title'] ?? 'Try Music video scenario') ?></h2>
+                    <p><?= g_esc($demo['lead'] ?? '') ?></p>
+                </div>
+
+                <form method="post" action="<?= g_esc($prefix.'/ai-products/') ?>#demo" class="contact-form reveal" style="max-width:42rem">
+                    <label>
+                        <?= g_esc($demo['brief'] ?? 'Creative brief') ?>
+                        <textarea name="brief" required maxlength="8000" rows="5"><?= g_esc($formValues['brief']) ?></textarea>
+                    </label>
+                    <label>
+                        <?= g_esc($demo['mood'] ?? 'Mood / genre (optional)') ?>
+                        <input type="text" name="mood" maxlength="500" value="<?= g_esc($formValues['mood']) ?>">
+                    </label>
+                    <div class="form-row-2">
+                        <label>
+                            <?= g_esc($demo['scenes'] ?? 'Scenes') ?>
+                            <input type="number" name="scene_count" min="1" max="20" value="<?= (int) $formValues['scene_count'] ?>" required>
+                        </label>
+                        <label>
+                            <?= g_esc($demo['characters'] ?? 'Characters') ?>
+                            <input type="number" name="character_count" min="1" max="8" value="<?= (int) $formValues['character_count'] ?>" required>
+                        </label>
+                    </div>
+                    <button class="btn" type="submit"><?= g_esc($demo['submit'] ?? 'Generate') ?></button>
+                    <p class="form-privacy muted"><?= g_esc($demo['privacy'] ?? '') ?></p>
+                    <?php if ($formError): ?>
+                        <p class="form-status is-error" role="alert"><?= g_esc($formError) ?></p>
+                    <?php endif; ?>
+                </form>
+
+                <?php if (is_array($result)): ?>
+                    <div class="ai-result reveal" style="margin-top:2rem">
+                        <?php if (! empty($result['concept'])): ?>
+                            <h3><?= g_esc($demo['result_concept'] ?? 'Concept') ?></h3>
+                            <p><?= g_esc((string) $result['concept']) ?></p>
+                        <?php endif; ?>
+
+                        <?php if (! empty($result['characters']) && is_array($result['characters'])): ?>
+                            <h3><?= g_esc($demo['result_characters'] ?? 'Characters') ?></h3>
+                            <?php foreach ($result['characters'] as $character): ?>
+                                <?php if (! is_array($character)) {
+                                    continue;
+                                } ?>
+                                <article class="ai-result__card">
+                                    <h4><?= g_esc((string) ($character['name'] ?? '')) ?></h4>
+                                    <p><?= g_esc((string) ($character['lock'] ?? '')) ?></p>
+                                </article>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+
+                        <?php if (! empty($result['scenes']) && is_array($result['scenes'])): ?>
+                            <h3><?= g_esc($demo['result_scenes'] ?? 'Scenes') ?></h3>
+                            <?php foreach ($result['scenes'] as $i => $scene): ?>
+                                <?php if (! is_array($scene)) {
+                                    continue;
+                                } ?>
+                                <article class="ai-result__card">
+                                    <h4><?= g_esc(($demo['scene_label'] ?? 'Scene').' '.((int) $i + 1)) ?></h4>
+                                    <p><strong><?= g_esc($demo['beat'] ?? 'Beat') ?>:</strong> <?= g_esc((string) ($scene['beat'] ?? '')) ?></p>
+                                    <p><strong><?= g_esc($demo['imagine'] ?? 'Imagine prompt') ?>:</strong></p>
+                                    <pre class="ai-result__prompt"><?= g_esc((string) ($scene['imagine_prompt'] ?? '')) ?></pre>
+                                </article>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </section>
+        <?php
+        $title = ($meta['ai_products_title'] ?? 'AI Products').' · '.$suffix;
+        $desc = $meta['ai_products_description'] ?? '';
     } elseif ($page === 'portfolio') {
         $p = $copy['portfolio'] ?? [];
         ?>

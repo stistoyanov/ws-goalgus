@@ -9,6 +9,8 @@
     "founder_description": "Stiliyan Stoyanov — founder of GOALGUS LTD. Lead software engineer and solution architect with 13+ years across SaaS, fintech, cloud and AI.",
     "services_title": "Services",
     "services_description": "Product engineering, APIs, CMS platforms, and reliable operations.",
+    "ai_products_title": "AI Products",
+    "ai_products_description": "Structured AI tools with a public API — demos on the free plan, ready for real products.",
     "portfolio_title": "Portfolio",
     "portfolio_description": "Selected client websites we design, build, and run.",
     "contact_title": "Contact",
@@ -19,6 +21,7 @@
     "about": "About",
     "founder": "Founder",
     "services": "Services",
+    "ai_products": "AI Products",
     "portfolio": "Portfolio",
     "contact": "Contact",
     "cta": "Start a project"
@@ -252,6 +255,51 @@
     "error": "Something went wrong. Please try again or email us directly.",
     "direct": "Or reach us directly",
     "privacy": "By sending this form you agree that GOALGUS LTD may use your details only to reply to this enquiry. We do not sell or share your data for marketing."
+  },
+  "ai_products": {
+    "headline": "AI Products",
+    "lead": "Structured tools on the GOALGUS AI API — demos you can try, with clear plans for when you are ready to ship.",
+    "products_title": "What you can run",
+    "products_lead": "Each product is a named tool with a fixed input/output contract — not a blank chat box.",
+    "products": [
+      {
+        "title": "Music video scenario",
+        "text": "Turn a short brief into locked characters and Grok Imagine–ready scene prompts.",
+        "badge": "Free demo · API ready"
+      }
+    ],
+    "pricing_title": "Plans",
+    "pricing_lead": "Start free. Paid tiers later — no surprise billing in this release.",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "€0",
+        "text": "Public demos and API keys for approved tools. Daily run limits apply."
+      },
+      {
+        "name": "Pro",
+        "price": "Coming soon",
+        "text": "Higher limits, more tools, and production SLAs — details when we open paid plans."
+      }
+    ],
+    "demo": {
+      "title": "Demo: Music video scenario",
+      "lead": "Describe the song vibe. We call the same API a real client would use — server-side Bearer, structured JSON back.",
+      "brief": "Creative brief",
+      "mood": "Mood / genre (optional)",
+      "scenes": "Scenes",
+      "characters": "Characters",
+      "submit": "Generate scenario",
+      "privacy": "Demo traffic uses the free GOALGUS AI API plan. Do not paste secrets or private lyrics you cannot share.",
+      "error_brief": "Please enter a short creative brief.",
+      "error_generic": "Something went wrong. Please try again in a moment.",
+      "result_concept": "Concept",
+      "result_characters": "Characters",
+      "result_scenes": "Scenes",
+      "scene_label": "Scene",
+      "beat": "Beat",
+      "imagine": "Imagine prompt"
+    }
   },
   "footer": {
     "tagline": "Full-stack software · Sofia, Bulgaria",

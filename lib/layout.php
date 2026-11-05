@@ -27,6 +27,7 @@ function g_render_layout(array $ctx, string $page, string $bodyHtml, string $met
         'about' => ['href' => $prefix.'/about/', 'label' => $nav['about'] ?? 'About'],
         'founder' => ['href' => $prefix.'/founder/', 'label' => $nav['founder'] ?? 'Founder'],
         'services' => ['href' => $prefix.'/services/', 'label' => $nav['services'] ?? 'Services'],
+        'ai-products' => ['href' => $prefix.'/ai-products/', 'label' => $nav['ai_products'] ?? 'AI Products'],
         'portfolio' => ['href' => $prefix.'/portfolio/', 'label' => $nav['portfolio'] ?? 'Portfolio'],
         'contact' => ['href' => $prefix.'/contact/', 'label' => $nav['contact'] ?? 'Contact'],
     ];
@@ -72,7 +73,7 @@ function g_render_layout(array $ctx, string $page, string $bodyHtml, string $met
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/site.css?v=theme-toggle1">
+    <link rel="stylesheet" href="/assets/css/site.css?v=ai-products1">
     <?php
     g_json_ld($company, $locale, $metaDescription, g_site_origin($locale).'/assets/images/brand/goalgus_shield.png');
     if ($page === 'founder') {
@@ -192,7 +193,7 @@ function g_render_layout(array $ctx, string $page, string $bodyHtml, string $met
       };
     </script>
     <script src="/assets/js/locale-switch.js?v=lang1" defer></script>
-    <script src="/assets/js/site.js?v=theme-toggle1" defer></script>
+    <script src="/assets/js/site.js?v=ai-products1" defer></script>
 </body>
 </html>
     <?php

@@ -36,6 +36,7 @@ function g_path_for_locale(string $locale, string $page = 'home'): string
         'about' => 'about/',
         'founder' => 'founder/',
         'services' => 'services/',
+        'ai-products' => 'ai-products/',
         'portfolio' => 'portfolio/',
         'contact' => 'contact/',
     ];
