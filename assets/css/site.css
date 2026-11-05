@@ -173,25 +173,38 @@ a {
   display: none;
 }
 
-.theme-switch {
+.theme-toggle {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0;
   border: 1px solid var(--line);
+  border-radius: 999px;
   background: var(--bg-elevated);
-}
-
-.theme-switch button {
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  padding: 0.45rem 0.55rem;
-  cursor: pointer;
-}
-
-.theme-switch button[aria-pressed="true"] {
   color: var(--ink);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
   background: var(--accent-soft);
+  border-color: color-mix(in srgb, var(--line) 60%, var(--ink));
+  outline: none;
+}
+
+.theme-toggle__icon {
+  display: none;
+}
+
+html:not([data-theme="dark"]) .theme-toggle__icon--sun {
+  display: block;
+}
+
+html[data-theme="dark"] .theme-toggle__icon--moon {
+  display: block;
 }
 
 .lang-menu {
@@ -743,8 +756,9 @@ button.btn {
     white-space: nowrap;
   }
 
-  .theme-switch button {
-    padding: 0.4rem 0.42rem;
+  .theme-toggle {
+    width: 2rem;
+    height: 2rem;
   }
 }
 

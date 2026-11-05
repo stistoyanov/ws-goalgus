@@ -262,6 +262,8 @@
     "light": "Light",
     "dark": "Dark",
     "auto": "Auto",
-    "label": "Theme"
+    "label": "Theme",
+    "to_light": "Switch to day mode",
+    "to_dark": "Switch to night mode"
   }
 }

@@ -72,7 +72,7 @@ function g_render_layout(array $ctx, string $page, string $bodyHtml, string $met
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/site.css?v=founder2">
+    <link rel="stylesheet" href="/assets/css/site.css?v=theme-toggle1">
     <?php
     g_json_ld($company, $locale, $metaDescription, g_site_origin($locale).'/assets/images/brand/goalgus_shield.png');
     if ($page === 'founder') {
@@ -109,11 +109,22 @@ function g_render_layout(array $ctx, string $page, string $bodyHtml, string $met
                 <?php endforeach; ?>
             </nav>
             <div class="header-tools">
-                <div class="theme-switch" role="group" aria-label="<?= g_esc($theme['label'] ?? 'Theme') ?>">
-                    <button type="button" data-theme-set="auto" title="<?= g_esc($theme['auto'] ?? 'Auto') ?>">A</button>
-                    <button type="button" data-theme-set="light" title="<?= g_esc($theme['light'] ?? 'Light') ?>">L</button>
-                    <button type="button" data-theme-set="dark" title="<?= g_esc($theme['dark'] ?? 'Dark') ?>">D</button>
-                </div>
+                <button type="button"
+                    class="theme-toggle"
+                    data-theme-toggle
+                    data-theme-label="<?= g_esc($theme['label'] ?? 'Theme') ?>"
+                    data-to-light="<?= g_esc($theme['to_light'] ?? 'Switch to day mode') ?>"
+                    data-to-dark="<?= g_esc($theme['to_dark'] ?? 'Switch to night mode') ?>"
+                    aria-label="<?= g_esc($theme['label'] ?? 'Theme') ?>"
+                    title="<?= g_esc($theme['label'] ?? 'Theme') ?>">
+                    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+                        <path d="M12 2.75v2.1M12 19.15v2.1M2.75 12h2.1M19.15 12h2.1M5.05 5.05l1.5 1.5M17.45 17.45l1.5 1.5M17.45 5.05l-1.5 1.5M6.55 17.45l-1.5 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                        <path d="M19.5 13.2A7.4 7.4 0 0 1 10.8 4.5 7.5 7.5 0 1 0 19.5 13.2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
                 <?php g_render_lang_switch($locale, $langLocales, $langAria); ?>
                 <a class="btn btn-small" href="<?= g_esc($prefix.'/contact/') ?>"><?= g_esc($nav['cta'] ?? 'Contact') ?></a>
             </div>
@@ -126,11 +137,22 @@ function g_render_layout(array $ctx, string $page, string $bodyHtml, string $met
                 <a href="<?= g_esc($item['href']) ?>"<?= $key === $page ? ' aria-current="page"' : '' ?>><?= g_esc($item['label']) ?></a>
             <?php endforeach; ?>
             <div class="mobile-nav__tools">
-                <div class="theme-switch" role="group" aria-label="<?= g_esc($theme['label'] ?? 'Theme') ?>">
-                    <button type="button" data-theme-set="auto" title="<?= g_esc($theme['auto'] ?? 'Auto') ?>">A</button>
-                    <button type="button" data-theme-set="light" title="<?= g_esc($theme['light'] ?? 'Light') ?>">L</button>
-                    <button type="button" data-theme-set="dark" title="<?= g_esc($theme['dark'] ?? 'Dark') ?>">D</button>
-                </div>
+                <button type="button"
+                    class="theme-toggle"
+                    data-theme-toggle
+                    data-theme-label="<?= g_esc($theme['label'] ?? 'Theme') ?>"
+                    data-to-light="<?= g_esc($theme['to_light'] ?? 'Switch to day mode') ?>"
+                    data-to-dark="<?= g_esc($theme['to_dark'] ?? 'Switch to night mode') ?>"
+                    aria-label="<?= g_esc($theme['label'] ?? 'Theme') ?>"
+                    title="<?= g_esc($theme['label'] ?? 'Theme') ?>">
+                    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+                        <path d="M12 2.75v2.1M12 19.15v2.1M2.75 12h2.1M19.15 12h2.1M5.05 5.05l1.5 1.5M17.45 17.45l1.5 1.5M17.45 5.05l-1.5 1.5M6.55 17.45l-1.5 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                        <path d="M19.5 13.2A7.4 7.4 0 0 1 10.8 4.5 7.5 7.5 0 1 0 19.5 13.2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
                 <?php g_render_lang_switch($locale, $langLocales, $langAria); ?>
                 <a class="btn btn-small" href="<?= g_esc($prefix.'/contact/') ?>"><?= g_esc($nav['cta'] ?? 'Contact') ?></a>
             </div>
@@ -170,7 +192,7 @@ function g_render_layout(array $ctx, string $page, string $bodyHtml, string $met
       };
     </script>
     <script src="/assets/js/locale-switch.js?v=lang1" defer></script>
-    <script src="/assets/js/site.js?v=founder2" defer></script>
+    <script src="/assets/js/site.js?v=theme-toggle1" defer></script>
 </body>
 </html>
     <?php

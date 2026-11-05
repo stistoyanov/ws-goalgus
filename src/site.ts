@@ -23,23 +23,43 @@ function resolveTheme(mode: ThemeMode): 'light' | 'dark' {
   return mode === 'auto' ? hourTheme() : mode;
 }
 
+function themeCopy(): { toLight: string; toDark: string; label: string } {
+  const root = document.querySelector<HTMLElement>('[data-theme-toggle]');
+  return {
+    toLight: root?.dataset.toLight || 'Switch to day mode',
+    toDark: root?.dataset.toDark || 'Switch to night mode',
+    label: root?.dataset.themeLabel || 'Theme',
+  };
+}
+
 function applyTheme(mode: ThemeMode): void {
   const theme = resolveTheme(mode);
   document.documentElement.setAttribute('data-theme', theme);
   document.documentElement.setAttribute('data-theme-mode', mode);
-  document.querySelectorAll<HTMLButtonElement>('[data-theme-set]').forEach((btn) => {
-    btn.setAttribute('aria-pressed', btn.dataset.themeSet === mode ? 'true' : 'false');
+
+  const copy = themeCopy();
+  const nextLabel = theme === 'dark' ? copy.toLight : copy.toDark;
+
+  document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((btn) => {
+    btn.setAttribute('data-theme-resolved', theme);
+    btn.setAttribute('aria-label', nextLabel);
+    btn.setAttribute('title', nextLabel);
   });
 }
 
-function initTheme(): void {
+function currentMode(): ThemeMode {
   const stored = (localStorage.getItem(THEME_KEY) as ThemeMode | null) ?? 'auto';
-  const mode: ThemeMode = stored === 'light' || stored === 'dark' || stored === 'auto' ? stored : 'auto';
-  applyTheme(mode);
+  return stored === 'light' || stored === 'dark' || stored === 'auto' ? stored : 'auto';
+}
 
-  document.querySelectorAll<HTMLButtonElement>('[data-theme-set]').forEach((btn) => {
+function initTheme(): void {
+  applyTheme(currentMode());
+
+  document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const next = (btn.dataset.themeSet || 'auto') as ThemeMode;
+      // Single control: toggle the resolved appearance (light ↔ dark),
+      // locking the preference so Auto no longer overrides after the first click.
+      const next: ThemeMode = resolveTheme(currentMode()) === 'dark' ? 'light' : 'dark';
       localStorage.setItem(THEME_KEY, next);
       applyTheme(next);
     });
@@ -47,8 +67,7 @@ function initTheme(): void {
 
   // Re-evaluate auto theme every 15 minutes in case the hour boundary passes.
   window.setInterval(() => {
-    const current = (localStorage.getItem(THEME_KEY) as ThemeMode | null) ?? 'auto';
-    if (current === 'auto') {
+    if (currentMode() === 'auto') {
       applyTheme('auto');
     }
   }, 15 * 60 * 1000);
