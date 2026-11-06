@@ -22,12 +22,12 @@ function g_render_layout(array $ctx, string $page, string $bodyHtml, string $met
     $legal = $company['legal_name'] ?? 'GOALGUS LTD';
     $year = date('Y');
 
+    // AI Products kept in codebase but hidden from public nav until product launch.
     $pages = [
         'home' => ['href' => $prefix.'/', 'label' => $nav['home'] ?? 'Home'],
         'about' => ['href' => $prefix.'/about/', 'label' => $nav['about'] ?? 'About'],
         'founder' => ['href' => $prefix.'/founder/', 'label' => $nav['founder'] ?? 'Founder'],
         'services' => ['href' => $prefix.'/services/', 'label' => $nav['services'] ?? 'Services'],
-        'ai-products' => ['href' => $prefix.'/ai-products/', 'label' => $nav['ai_products'] ?? 'AI Products'],
         'portfolio' => ['href' => $prefix.'/portfolio/', 'label' => $nav['portfolio'] ?? 'Portfolio'],
         'contact' => ['href' => $prefix.'/contact/', 'label' => $nav['contact'] ?? 'Contact'],
     ];

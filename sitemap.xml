@@ -28,11 +28,6 @@
     <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/services/"/>
   </url>
   <url>
-    <loc>https://goalgus.bg/bg/ai-products/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/ai-products/"/>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/ai-products/"/>
-  </url>
-  <url>
     <loc>https://goalgus.bg/bg/portfolio/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/portfolio/"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/portfolio/"/>
@@ -62,11 +57,6 @@
     <loc>https://goalgus.com/services/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/services/"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/services/"/>
-  </url>
-  <url>
-    <loc>https://goalgus.com/ai-products/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://goalgus.com/ai-products/"/>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://goalgus.bg/bg/ai-products/"/>
   </url>
   <url>
     <loc>https://goalgus.com/portfolio/</loc>

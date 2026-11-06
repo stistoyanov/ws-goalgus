@@ -2,6 +2,5 @@
 
 declare(strict_types=1);
 
-require_once dirname(__DIR__).'/lib/pages.php';
-
-g_page('en', 'ai-products');
+// Temporarily hidden from public — restore g_page('en', 'ai-products') when launching.
+require dirname(__DIR__).'/404.php';
